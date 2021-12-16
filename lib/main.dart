@@ -26,17 +26,21 @@ class DiceePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Row(
-
         children: [
-          Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: Expanded(
-
-              child: Image.asset('images/dice1.png'),
-      ),
+          Expanded(
+            child: TextButton(
+              onPressed: (){
+                print('Left Button pressed');
+              },
+                child: Image.asset('images/dice1.png')),
           ),
           Expanded(
-            child: Image.asset('images/dice1.png'),
+            child: TextButton(
+              onPressed: (){
+                print('Right Button pressed');
+              },
+              child: Image.asset('images/dice1.png'),
+            ),
           ),
         ],
       ),
